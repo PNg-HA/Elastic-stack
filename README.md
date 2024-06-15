@@ -1,6 +1,6 @@
 [![Elastic Stack version](https://img.shields.io/badge/Elastic%20Stack-8.0.1-00bfb3?style=flat&logo=elastic-stack)](https://www.elastic.co/blog/category/releases)
 # Elastic Stack
-My ELK stack, referenced by https://www.elastic.co
+NT132 (Networks and Systems Administration) Project - ELK stack, referenced by https://www.elastic.co
 
 Elastic Stack, also known as ELK Stack, is a stack that comprises of three popular projects: 
 
