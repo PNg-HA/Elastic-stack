@@ -20,19 +20,21 @@ Elastic Stack can also be deployed as a Cloud service supported on AWS, Google C
 In this repository, I will only go into detail about Elasticsearch and Kibana.
 
 ## Contents
-
-1. [Components](#Components)
+1. [Architecture design](#Architecture-design)
+2. [Components](#Components)
 	* [Elasticsearch](#Elasticsearch)
 		* [Nodes and indices](#Nodes-and-indices)
 		* [In case of disaster](#In-case-of-disaster)
 	* [Kibana](#Kibana)
-	
-2. [Setup](#Setup)
+3. [Setup](#Setup)
 	* [Host requirements](#Host-requirements)
 	* [Setup steps](#Setup-steps)
-3. [Backup and restore](#Backup-and-restore)
+4. [Backup and restore](#Backup-and-restore)
 	* [Backup](#Backup)
 	* [Restore](#Restore)
+## Architecture design
+![image](https://github.com/PNg-HA/Elastic-Stack/assets/93396414/9ddf29ea-fac1-4ce8-9c54-3526a96a6625)
+**Scenario**: VM1 and VM2 are Ubuntu servers. VM2 for Beat agent, sending metrics of VM2 to VM1. VM1 for ELK stack and AWS S3 setup.
 
 ## Components
 ### Elasticsearch
@@ -67,6 +69,7 @@ Kibana is the tool to visualize the Elasticsearch data and to manage the Elastic
 * [Docker Compose][compose-install] version **1.26.0** or newer (including [Compose V2][compose-v2]) (8/12/2023 test on v2.21.0)
 * More than **6 GB** of RAM (because the host consumes lots of memory when runs ELK multi nodes) (8/12/2023 docker v23 results in error "kernel does not support swap limit capabilities or the cgroup is not mounted. memory limited without swap")
 ### Setup steps
+The filebeat installation is in https://github.com/PNg-HA/ELK-Run-FileBeat.
 > **Summary**  
 > This document will show how to use Docker and Docker Compose to install 3 
 > Elasticsearch nodes in 1 cluser, Kibana to visual and management them, and how to backup 
