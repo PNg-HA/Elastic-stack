@@ -33,7 +33,8 @@ In this repository, I will only go into detail about Elasticsearch and Kibana.
 	* [Backup](#Backup)
 	* [Restore](#Restore)
 ## Architecture design
-![image](https://github.com/PNg-HA/Elastic-Stack/assets/93396414/9ddf29ea-fac1-4ce8-9c54-3526a96a6625)
+![image](https://github.com/PNg-HA/Elastic-Stack/assets/93396414/82addc2d-26ae-4c65-b565-d65f5fd62431)
+
 **Scenario**: VM1 and VM2 are Ubuntu servers. VM2 for Beat agent, sending metrics of VM2 to VM1. VM1 for ELK stack and AWS S3 setup.
 
 ## Components
